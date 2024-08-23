@@ -1,36 +1,35 @@
+/* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
+    box-sizing: border-box;
+    line-height: 1.6;
 }
 
-header {
-    background-color: #fff;
-    padding: 15px 0;
-    border-bottom: 1px solid #ddd;
-}
-
+/* Header */
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
-    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo img {
     height: 50px;
+    object-fit: contain;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
-}
-
-nav ul li {
-    display: inline;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li a {
@@ -40,90 +39,210 @@ nav ul li a {
 }
 
 .header-icons a {
-    margin-left: 15px;
+    margin-left: 20px;
+    color: #333;
+    font-size: 20px;
 }
 
+/* Hero Section */
 .hero {
-    background-image: url("../img/banner-contraccion-alimentos-dibujados-mano_23-2149210311.avif");
+    background-image: url('../img/banner-contraccion-alimentos-dibujados-mano_23-2149210311.avif');
     background-size: cover;
     background-position: center;
-    color: #fff;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 100px 20px;
+    color: #fff;
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .hero-content {
-    max-width: 800px;
-    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 90%;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
 }
 
 .hero-button {
-    background-color: #ff6f61;
-    color: #fff;
     padding: 10px 20px;
+    background-color: #d9534f;
+    color: #fff;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.hero-button:hover {
+    background-color: #c9302c;
+}
+
+/* Products Section */
+#productos h2 {
+    text-align: center;
 }
 
 .products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    padding: 40px;
-    background-color: #f9f9f9;
+    margin: 40px 0;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .product-card {
     background-color: #fff;
     padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 10px;
     text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
 }
 
 .product-card img {
-    max-width: 100%;
-    border-radius: 5px;
-    margin-bottom: 10px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-card h3 {
+    font-size: 24px;
+    margin: 15px 0;
+}
+
+.product-card p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
 }
 
 .product-button {
-    display: inline-block;
-    margin-top: 10px;
-    background-color: #ff6f61;
+    padding: 10px 15px;
+    background-color: #5cb85c;
     color: #fff;
-    padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
-    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s;
 }
 
+.product-button:hover {
+    background-color: #4cae4c;
+}
+
+/* About Us Section */
 #sobre-nosotros {
-    padding: 40px;
+    padding: 40px 20px;
+    background-color: #f8f9fa;
     text-align: center;
 }
 
+#sobre-nosotros p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Contact Section */
+#contacto {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#contacto form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+#contacto input, #contacto textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#contacto button {
+    padding: 10px 20px;
+    background-color: #d9534f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#contacto button:hover {
+    background-color: #c9302c;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    font-size: 24px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #d9534f;
+}
+
+/* Footer */
 footer {
+    padding: 20px;
     background-color: #333;
     color: #fff;
-    padding: 40px 20px;
+    text-align: center;
 }
 
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+footer p {
+    margin: 5px 0;
 }
 
-.footer-section h3 {
-    margin-bottom: 10px;
-}
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5em;
+    }
 
-.footer-section a img {
-    width: 24px;
-    margin-right: 10px;
+    .hero p {
+        font-size: 1.2em;
+    }
+
+    .product-card h3 {
+        font-size: 20px;
+    }
+
+    .product-card p {
+        font-size: 14px;
+    }
 }
